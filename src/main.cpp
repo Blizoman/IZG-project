@@ -2,8 +2,10 @@
 #include "graphics.h"
 #include "ppm.h"
 #include <iostream>
+#include <cmath>
 
 int main() {
+    constexpr float PI = 3.14159265f;
     std::cout << "IZG Project - Computer Graphics Demo" << std::endl;
     
     // Create a framebuffer
@@ -36,8 +38,8 @@ int main() {
     
     // Draw some circles in a pattern
     for (int i = 0; i < 8; i++) {
-        int x = 400 + static_cast<int>(150 * std::cos(i * 3.14159f / 4));
-        int y = 400 + static_cast<int>(150 * std::sin(i * 3.14159f / 4));
+        int x = 400 + static_cast<int>(150 * std::cos(i * PI / 4));
+        int y = 400 + static_cast<int>(150 * std::sin(i * PI / 4));
         Graphics::drawCircle(fb, x, y, 20, Colors::CYAN);
     }
     
