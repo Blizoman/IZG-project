@@ -40,3 +40,6 @@ Thumbs.db
 # Output files
 output.ppm
 *.ppm
+
+# CodeQL
+_codeql_*
